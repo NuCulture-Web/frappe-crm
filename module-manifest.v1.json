@@ -1,0 +1,30 @@
+{
+	"contract": "module-manifest.v1",
+	"id": "crm",
+	"name": "Sales CRM",
+	"description": "Frappe CRM on the client's ERPNext site: leads, deals, pipeline stages, activities, notes, tasks, call logs and email, with won deals handed to ERPNext customers and quotations.",
+	"scope": "core",
+	"product": "back-office",
+	"frappeApp": "crm",
+	"enable": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/crm"
+	},
+	"probe": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/.well-known/nuculture-build/crm.json"
+	},
+	"peopleRoles": {
+		"Owner": [
+			"Sales Manager"
+		],
+		"Manager": [
+			"Sales Manager"
+		],
+		"Staff": [
+			"Sales User"
+		]
+	}
+}
